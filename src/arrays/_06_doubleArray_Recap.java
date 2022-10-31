@@ -1,0 +1,58 @@
+package arrays;
+
+import java.util.Arrays;
+
+public class _06_doubleArray_Recap {
+    public static void main(String[] args) {
+        //1.2, 2.3, -1.3, -3.7 create double array with these values,using curly brackets
+
+        double [] numbers = {1.2, 2.3, -1.3, -3.7};
+        char[] chars = {'a', 'b', 'c', 'd'} ;
+        System.out.println(Arrays.toString(numbers));
+        System.out.println("The length of the array is " + numbers.length);
+
+        // 1.5, 2.2., -1.3, -3.7 - [-3.7, -1.3, 1.2, 2.3]
+
+        Arrays.sort(numbers);
+        System.out.println("Arrays after sorting - >" + Arrays.toString(numbers));
+
+        /*
+        output
+        -3.7
+        -1.3
+        1.5
+        2.3
+
+         */
+
+        System.out.println("\nFori loop print below:");
+
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+            //When you dont need indexes or an increment to use go with for each with arrays
+
+            System.out.println(("\nFor each loop print below"));
+
+            for(double n : numbers){
+                System.out.println(n);
+            }
+
+            /*
+        output:
+        -3.7 - a -> at the index 0
+        -1.3 - b -> at the index 1
+        1.5 - c -> at the index 2
+        2.3 - d -> at the index 3
+         */
+
+        System.out.println("\nFori loop print two arrays below:");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i] + " - " + chars[i]);
+        }
+
+
+        }
+
+    }
+
