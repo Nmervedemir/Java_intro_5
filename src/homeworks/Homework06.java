@@ -81,43 +81,24 @@ public class Homework06 {
 
         System.out.println("===== Task 8 =====");
 
-            char [] characters = {'A', 'b', 'G', 'H', '7', '5', '&', '*', 'e', '@', '4' };
+        char[] charArr = {'A', 'b', 'G', 'H', '7', '5', '&', '*', 'e', '@', '4', ' '};
+        int uLetters = 0;
+        int lLetters = 0;
+        int digits = 0;
+        int special = 0;
 
-            System.out.println(Arrays.toString(characters));
-
-        int countU1 = 0;
-
-        for (char character : characters) {
-            if(Character.isLetter(character)) countU1++;
+        for (char c : charArr) {
+            if(Character.isUpperCase(c)) uLetters++;
+            else if(Character.isLowerCase(c)) lLetters++;
+            else if(Character.isDigit(c)) digits++;
+            else if(c != ' ') special++;
         }
-        System.out.println("Letter =" + " " +  countU1);
-        int countU2= 0;
 
-        for (char character : characters) {
-            if(Character.isUpperCase(character)) countU2++;
-        }
-        System.out.println("Uppercase letter =" + " " + countU2);
-
-        int countU3= 0;
-
-        for(char character : characters){
-            if(Character.isLowerCase(character)) countU3++ ;
-        }
-        System.out.println("Lowecase letters =" + " " + countU3);
-
-        int countU4 = 0;
-
-        for(char character : characters){
-            if(Character.isDigit(character)) countU4++ ;
-        }
-        System.out.println("Digits = " + " " +countU4);
-
-        int countU5 = 0;
-
-        for(char character : characters){
-            if(Character.isLetter(character) == Character.isDigit(character)) countU5++ ;
-        }
-        System.out.println("Special characters = " + " " +countU5);
+        System.out.println("Letter = " + (uLetters + lLetters));
+        System.out.println("Uppercase letters = " + uLetters);
+        System.out.println("lowercase letters = " + lLetters);
+        System.out.println("Digits = " + digits);
+        System.out.println("Special characters = " + special);
 
         System.out.println("===== Task 9 =====");
 
