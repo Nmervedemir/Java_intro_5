@@ -1,6 +1,5 @@
 package homeworks;
 
-import sun.util.resources.cldr.uz.CalendarData_uz_Arab_AF;
 
 import java.sql.Array;
 import java.sql.SQLOutput;
@@ -11,6 +10,7 @@ import java.util.Collections;
 public class Homework07 {
     public static void main(String[] args) {
 
+        java.lang.Object System;
         System.out.println("===== Task 1 =====");
         ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(10);
