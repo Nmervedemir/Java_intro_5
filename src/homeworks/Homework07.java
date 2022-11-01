@@ -1,6 +1,5 @@
 package homeworks;
 
-
 import java.sql.Array;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
@@ -10,7 +9,6 @@ import java.util.Collections;
 public class Homework07 {
     public static void main(String[] args) {
 
-        java.lang.Object System;
         System.out.println("===== Task 1 =====");
         ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(10);
@@ -88,20 +86,14 @@ public class Homework07 {
         Collections.sort(objects);
         System.out.println(objects);
 
-        int containsMm = 0 ;
-
-        for(String object :objects ){
-            if(object.toLowerCase().startsWith("m")  ) containsMm++ ;
+        int countM = 0;
+        int countAOrE = 0;
+        for (String object: objects){
+            if (object.startsWith("M") || object.startsWith("m")) countM++;
+            if (object.startsWith("A") || object.startsWith("a") || object.startsWith("E") || object.startsWith("e"))
+                countAOrE++;
         }
-        System.out.println(containsMm);
-
-        //int counterAE = 0;
-
-       // for(String obj : objects){
-            //if(obj.toLowerCase().startsWith("a") || obj.toLowerCase().startsWith("e")  ) counterAE++;
-        //}
-
-        //System.out.println(counterAE)
+        System.out.println(countM + "\n" + countAOrE);
 
         System.out.println("===== Task 9 =====");
 
@@ -152,7 +144,7 @@ public class Homework07 {
             if(num % 10 == 0 ) counter10 ++;
             if(num % 2 ==0 && num > 15 ) counterMore ++ ;
             if (num % 2 ==1 && num < 20 ) counterLess++;
-            else if (num < 15 || num > 50 ) counterLessG++;
+            if (num < 15 || num > 50 ) counterLessG++;
         }
 
         System.out.println("Elements that can be divided by 10 ="+ counter10 +
@@ -161,31 +153,5 @@ public class Homework07 {
                 "\n Elements that are less than 15 or greater than 50 = " +counterLessG);
 
 
-        }
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
+}

@@ -1,10 +1,10 @@
 package homeworks;
 
+
 import utilities.ScannerHelper;
 
 import java.util.Scanner;
-
-import static utilities.ScannerHelper.getAString;
+import java.util.Scanner;
 
 public class Homework04 {
 
