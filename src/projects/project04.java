@@ -16,7 +16,7 @@ public class project04 {
             String str3 = name.substring(name.length() - 4);
             System.out.println(str3 + str2 + str1);
         } else {
-            System.out.println("This string");
+            System.out.println("This string does not have 8 characters");
         }
 
         System.out.println("=======Task 2 =======");
@@ -100,15 +100,19 @@ public class project04 {
         }
 
         System.out.println("=======Task 10 =======");
-        String word = ScannerHelper.getAString();
-        String reverseWord = "";
-        if(word.length()>1) {
-            for (int i = word.length() - 1; i >= 0; i--)
-                if(reverseWord.equals(word))
-                    reverseWord += word.charAt(i);
-            System.out.println("This word is palindrome");
-        }else
-        {System.out.println("This word does not have 1 or more characters");
+        String word =ScannerHelper.getAString();
+        String newWord = "";
+        if (word.length() < 1) {
+            System.out.println("This word does not have 1 or more characters. ");
+        } else {
+            for (int j = word.length() - 1; j >= 0; j--) {
+                newWord = newWord + word.charAt(j);
+            }
+            if (word.equals(newWord)) {
+                System.out.println(word + " is a palindrome");
+            } else {
+                System.out.println(word + " is not a palindrome");
+            }
         }
 
         System.out.println("=======Task 11 =======");

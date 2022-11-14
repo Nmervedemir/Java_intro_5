@@ -21,7 +21,8 @@ public class Exercise04_ReverseAString {
         nhoJ
           */
 
-       String name= ScannerHelper.getAName();
+      String name= ScannerHelper.getAName();
+
 
        String reversedName = "" ;
 

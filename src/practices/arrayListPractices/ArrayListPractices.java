@@ -1,0 +1,47 @@
+package practices.arrayListPractices;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+
+public class ArrayListPractices {
+    public static void main(String[] args) {
+        /*
+        1.Create an ArrayList and assing 5 numbers
+        example:[1,2,3,4,5]
+        2.Create a loop which will replace every number "2" with 7
+         example:[1,7,3,4,5]
+         3.Remove if the number is equal divisible by 2
+          example:[1,7,3,5]
+          4.As the last step add three "10" in the end
+
+          NOte :Use iterator
+
+             */
+        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1,2,3,4,5));
+        System.out.println(numbers);
+
+        for (int i = 0; i < numbers.size(); i++) {
+            if(numbers.get(i)==2)numbers.set(i,7);
+        }
+        System.out.println(numbers);
+
+        Iterator<Integer> numbersIterator = numbers.iterator();
+
+        while(numbersIterator.hasNext()){
+            Integer num = numbersIterator.next();
+            if(num % 2 == 0)numbersIterator.remove();
+
+    }
+        System.out.println(numbers);
+
+        for (int i = 0; i < 3; i++) {
+            numbers.add(10);
+
+        }
+
+
+
+        System.out.println(numbers);
+}
+}
