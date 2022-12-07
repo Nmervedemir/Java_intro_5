@@ -14,7 +14,7 @@ public class project08 {
         System.out.println(findSingleNumber(number));
 
         System.out.println("=======Task3=======");
-        String str = "Hello";
+        String str = "abc abc d";
         System.out.println(findFirstUniqueCharacter(str));
 
         System.out.println("=======Task4=======");
@@ -51,15 +51,15 @@ public class project08 {
         return singleValue;
     }
 
-    public static char findFirstUniqueCharacter(String str) {
-        char singleChar = ' ';
-        for (int i = 0; i < str.length()-1; i++) {
-            if(str.indexOf(str.charAt(i)) == str.lastIndexOf(str.charAt(i)))
-                singleChar = str.charAt(i);
-            break;
+    public static char findFirstUniqueCharacter(String s) {
+        while(s.length() > 0) {
+            // if the character we're looking at, exists in the rest of the string
+            // remove all instances of that character, else return character
+            if (s.length() == 1) return s.charAt(0);
+            if (!s.substring(1).contains("" + s.charAt(0))) return s.charAt(0);
+            else s = s.replaceAll("" + s.charAt(0), "");
         }
-        return singleChar;
-
+        return ' ';
     }
 
     public static int  findMissingNumber(int[] array){
